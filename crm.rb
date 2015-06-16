@@ -1,6 +1,7 @@
 require 'sinatra'
 
-get '/' do				# Created route: allows you to match request method and path
+get '/' do
+	@crm_app_name = "My CRM"
 	erb :index
 end
 
