@@ -1,5 +1,6 @@
 require 'sinatra'
 require_relative 'contact'
+require_relative 'rolodex'
 
 
 get '/' do
@@ -12,7 +13,7 @@ get '/contacts' do
 	@contacts << Contact.new(1, "Yehuda", "Katz", "yehuda@example.com", "Developer")
 	@contacts << Contact.new(2, "Mark", "Zuckerberg", "mark@facebook.com", "CEO")
 	@contacts << Contact.new(3, "Sergey", "Brin", "sergey@google.com", "Co-Founder")
-	
+
 	erb :contacts
 end
 
