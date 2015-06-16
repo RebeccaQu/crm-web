@@ -1,6 +1,6 @@
 require 'sinatra'
 
-get '/' do 
-	"Main Menu"
+get '/' do				# Created route: allows you to match request method and path
+	erb :index
 end
 
