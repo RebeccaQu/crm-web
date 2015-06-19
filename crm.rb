@@ -5,7 +5,6 @@ require_relative 'rolodex'
 $rolodex = Rolodex.new
 
 get '/' do
-	@crm_app_name = "My CRM"
 	erb :index
 end
 
@@ -17,8 +16,12 @@ get '/contacts/new' do
 	erb :new_contact
 end
 
-# get '/contacts/:id' do
-# params[:id]
+# get '/contacts/edit' do
+# 	erb :edit_contact
+# end
+
+# get '/contacts/delete' do
+# 	erb :delete_contact
 # end
 
 post '/contacts' do
@@ -26,3 +29,5 @@ post '/contacts' do
 		$rolodex.add_contact(new_contact)
 		redirect to('/contacts')
 end
+
+
